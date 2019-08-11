@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calcule de l'imc</title>
+    <link rel="stylesheet" href="css/bmi.css">
+</head>
+<body>
+    <div class="bloc-page">
+        <div class="container">
+            <h1>Calculer votre IMC</h1>
+            <div class="row">
+                <div class="col col-6">
+                    <div class="card">
+                        <h2>Calculer votre IMC</h2>
+                        <div class="content">
+                            <form class="form" action="">
+                                <div class="form-group">
+                                    <label for="taille">Entrer votre taille (cm)</label>
+                                    <input type="number" min="0" max="350" placeholder="votre taille" name="taille" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="poid">Entrer votre poid (kg)</label>
+                                    <input type="number" min="0" max="700" placeholder="votre poid" name="poid" required>
+                                </div>
+                                <button type="submit" class="btn btn-submit">Calculer</button>
+                                <button type="reset" class="btn btn-reset">Reset</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-6">
+                    <div class="card">
+                        <h2>INTERPRÉTATION DE L’INDICE DE MASSE CORPORELLE</h3>
+                        <div class="content">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>IMC (kg/m2)</td>
+                                        <td>Interprétation (selon l’OMS)</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="info">
+                                        <td>Inférieur à 16</td>
+                                        <td>Anorexie ou dénutrition</td>
+                                    </tr>
+                                    <tr class="info">
+                                        <td>Entre 16.5 et 18.5</td>
+                                        <td>Maigreur</td>
+                                    </tr>
+                                    <tr class="success">
+                                        <td>Entre 18.5 et 25</td>
+                                        <td>Corpulence normale</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td>Entre 25 et 30</td>
+                                        <td>Surpoids</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>Entre 30 et 35</td>
+                                        <td>Obésité modérée (Classe 1)</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>Entre 35 et 40</td>
+                                        <td>Obésité élevé (Classe 2)</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>Supérieur à 40 Obésite</td>
+                                        <td>Obésite morbide ou massive</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card card-result">
+                        <h2>Résultat : </h2>
+                        <div class="content">
+                            <h3>Votre indice de masse corporelle est de :</h3>
+                            <div id="resultIMC"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">@copyright <a href="https://lecuistotduweb.fr">LeCuistotduWeb</a> 2019</footer>
+        </div> 
+    </div>
+
+    <!-- script js  -->
+    <script src="js/bmi.js"></script>
+</body>
+</html>
